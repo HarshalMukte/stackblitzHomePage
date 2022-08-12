@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Mulish:wght@200;300;400&family=Orbitron:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1c1f26;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-family: "Mulish", sans-serif;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+body .container {
+  width: 100%;
+  height: 100vh;
+}
+
+body .container nav {
+  width: 100%;
+  padding: 25px;
+  position: fixed;
+  z-index: 20;
+}
+
+body .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container nav ul li {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  body .container nav ul li:nth-of-type(1n + 2) {
+    opacity: 0;
+    display: none;
+  }
+}
+
+body .container nav ul li.gitIcon {
+  margin-left: auto;
+}
+
+body .container nav ul li i.mainIcon {
+  padding-right: 10px;
+}
+
+body .container nav ul li.active a {
+  color: #fff;
+}
+
+body .container nav ul li a {
+  text-decoration: none;
+  color: #9e9e9e;
+  font-weight: 600;
+  display: block;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .container nav ul li a:hover {
+  color: #fff;
+}
+
+body .container .content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body .container .content .textDiv {
+  padding: 40px;
+  margin-top: 100px;
+}
+
+body .container .content .textDiv h1 {
+  font-size: 100px;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 900px) {
+  body .container .content .textDiv h1 {
+    font-size: 8vw;
+  }
+}
+
+body .container .content .textDiv h1.text_mobile {
+  height: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0.8;
+  text-overflow: unset;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  -webkit-transition: width 0.32s ease, opacity 0.32s ease-in, -webkit-filter 0.32s ease-in;
+  transition: width 0.32s ease, opacity 0.32s ease-in, -webkit-filter 0.32s ease-in;
+  transition: width 0.32s ease, opacity 0.32s ease-in, filter 0.32s ease-in;
+  transition: width 0.32s ease, opacity 0.32s ease-in, filter 0.32s ease-in, -webkit-filter 0.32s ease-in;
+  white-space: nowrap;
+  width: 0;
+}
+
+@media screen and (max-width: 900px) {
+  body .container .content .textDiv h1.text_mobile {
+    height: calc(8vw + 10px);
+  }
+}
+
+body .container .content .textDiv h1.text_mobile.isActiveText {
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+  -webkit-transition: width 0.32s ease, opacity 0.32s ease-out, -webkit-filter 0.2s ease-out;
+  transition: width 0.32s ease, opacity 0.32s ease-out, -webkit-filter 0.2s ease-out;
+  transition: width 0.32s ease, opacity 0.32s ease-out, filter 0.2s ease-out;
+  transition: width 0.32s ease, opacity 0.32s ease-out, filter 0.2s ease-out, -webkit-filter 0.2s ease-out;
+  width: 100%;
+}
+
+body .container .content .textDiv h1:last-of-type {
+  color: #69f5ff;
+}
+
+body .container .content .textDiv p {
+  font-size: 18px;
+  max-width: 700px;
+  color: #ffffffb3;
+  margin-top: 80px;
+  line-height: 2;
+}
+
+body .container .content .codeDiv {
+  width: 880px;
+  height: 600px;
+  position: absolute;
+  top: 100px;
+  left: 52%;
+  z-index: -1;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 0 1px #ffffff1a;
+          box-shadow: 0 0 0 1px #ffffff1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .content .codeDiv .codeHeader {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  -webkit-box-shadow: 0px 1px 0 0 #ffffff1a;
+          box-shadow: 0px 1px 0 0 #ffffff1a;
+}
+
+body .container .content .codeDiv .codeHeader .energyIcon {
+  width: 270px;
+  height: calc(100% - 4px);
+  bottom: -1px;
+  left: 140px;
+  position: absolute;
+  border: 1px solid #ffffff1a;
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: none;
+  background-color: #1c1f26;
+  background-image: url("../images/codeHeader.svg");
+  background-repeat: no-repeat;
+  background-size: 92px;
+  background-position: 16px 8px;
+}
+
+body .container .content .codeDiv .blankSpace {
+  width: 100%;
+  height: 40px;
+}
+
+body .container .content .codeDiv .mainCodeSection {
+  width: 100%;
+  -webkit-box-shadow: 0 -1px 0 0 #ffffff1a;
+          box-shadow: 0 -1px 0 0 #ffffff1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+}
+
+body .container .content .codeDiv .mainCodeSection .leftSection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  background-color: #00000014;
+  background-repeat: no-repeat;
+  border-right: 1px solid #ffffff1a;
+  background-image: url("../images/leftSection.svg");
+  background-position: 42px 32px;
+  background-size: 100px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .container .content .codeDiv .mainCodeSection .centerSection,
+body .container .content .codeDiv .mainCodeSection .rightSection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  border-right: 1px solid #ffffff1a;
+  background-image: url("../images/centerSection.svg");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: 52px 52px;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .container .content .codeDiv .mainCodeSection .centerSection .centerBottom,
+body .container .content .codeDiv .mainCodeSection .centerSection .rightBottom,
+body .container .content .codeDiv .mainCodeSection .rightSection .centerBottom,
+body .container .content .codeDiv .mainCodeSection .rightSection .rightBottom {
+  width: 100%;
+  background-color: #00000014;
+  background-image: url("../images/centerBottomSection.svg");
+  background-position: 28px 18px;
+  background-repeat: no-repeat;
+  background-size: 120px;
+  border-top: 1px solid #ffffff1a;
+  bottom: 0;
+  height: 32%;
+  left: 0;
+  position: absolute;
+  -webkit-transition: height 1.2s ease;
+  transition: height 1.2s ease;
+  width: 100%;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+body .container .content .codeDiv .mainCodeSection .rightSection {
+  background-image: url("../images/rightSection.svg");
+  background-position: 52px 42px;
+  background-size: 444px;
+}
+
+body .container .content .codeDiv .mainCodeSection .rightSection .rightBottom {
+  background-image: url("../images/rightBottomSection.svg");
+}
+
+@-webkit-keyframes textVisible {
+  0% {
+    width: 0px;
+    opacity: 0;
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes textVisible {
+  0% {
+    width: 0px;
+    opacity: 0;
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@-webkit-keyframes nonVisisble {
+  0% {
+    width: 100%;
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  100% {
+    width: 0px;
+    opacity: 0;
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+  }
+}
+
+@keyframes nonVisisble {
+  0% {
+    width: 100%;
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  100% {
+    width: 0px;
+    opacity: 0;
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
